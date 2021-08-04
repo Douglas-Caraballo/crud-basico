@@ -17,6 +17,9 @@
 
             $editar = new EmpleadosC();
             $editar -> EditarEmpleadoC();
+
+            $actualizar = new EmpleadosC();
+            $actualizar -> ActualizarEmpleadosC();
         ?>
 
 	</form>

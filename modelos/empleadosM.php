@@ -53,4 +53,26 @@ class EmpleadosM extends ConexionBD{
         $pdo -> close();
     }
 
+
+    //Actualizar Empleados
+
+    static public function ActualizarEmpleadosM($datosC, $tablaBD){
+        $pdo = ConexionBD::cBD()-> prepare("UPDATE $tablaBD SET nombre = :nombre, apellido = :apellido, email = :email,
+        puesto = :puesto, salario = :salario WHERE id = :id");
+
+        $pdo -> bindParam(":id", $datosC["id"], PDO::PARAM_INT);
+        $pdo -> bindParam(":nombre", $datosC["nombre"], PDO::PARAM_STR);
+        $pdo -> bindParam(":apellido", $datosC["apellido"], PDO::PARAM_STR);
+        $pdo -> bindParam(":email", $datosC["email"], PDO::PARAM_STR);
+        $pdo -> bindParam(":puesto", $datosC["puesto"], PDO::PARAM_STR);
+        $pdo -> bindParam(":salario", $datosC["salario"], PDO::PARAM_STR);
+
+        if($pdo->execute()){
+            return "Bien";
+        }else{
+            return "Error";
+        }
+        $pdo -> close();
+
+    }
 }

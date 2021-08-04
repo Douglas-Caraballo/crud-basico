@@ -47,7 +47,7 @@ class EmpleadosC{
 
                     <td><a href="Index.php?ruta=editar&id='.$value["id"].'"><button>Editar</button></a></td>
 
-                    <td><button>Borrar</button></td>
+                    <td><a href="Index.php?ruta=empleados&idB='.$value["id"].'"><button>Borrar</button></a></td>
 
                 </tr>';
 
@@ -99,6 +99,25 @@ class EmpleadosC{
             }
         }
 
+    }
+
+    //Borrar Empleado
+
+    public function BorrarEmpleadoC(){
+        if (isset($_GET["idB"])){
+
+            $datosC = $_GET["idB"];
+
+            $tablaBD = "empleados";
+            $respuesta = EmpleadosM::BorrarEmpleadoM($datosC, $tablaBD);
+
+            if($respuesta == "Bien" ){
+                header("location:Index.php?ruta=empleados");
+            }else{
+                echo "Error!!!";
+            }
+
+        }
     }
 
 }

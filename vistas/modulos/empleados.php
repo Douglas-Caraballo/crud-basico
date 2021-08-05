@@ -3,7 +3,7 @@
 	session_start();
 
 	if(!$_SESSION["Ingreso"]){
-		header("location:Index.php?ruta=ingreso");
+		header("location:index.php?ruta=ingreso");
 		exit();
 	}
 

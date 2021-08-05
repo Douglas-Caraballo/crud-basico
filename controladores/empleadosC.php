@@ -45,9 +45,9 @@ class EmpleadosC{
                     <td>'.$value["puesto"].'</td>
                     <td>$ '.$value["salario"].'</td>
 
-                    <td><a href="Index.php?ruta=editar&id='.$value["id"].'"><button>Editar</button></a></td>
+                    <td><a href="index.php?ruta=editar&id='.$value["id"].'"><button>Editar</button></a></td>
 
-                    <td><a href="Index.php?ruta=empleados&idB='.$value["id"].'"><button>Borrar</button></a></td>
+                    <td><a href="index.php?ruta=empleados&idB='.$value["id"].'"><button>Borrar</button></a></td>
 
                 </tr>';
 

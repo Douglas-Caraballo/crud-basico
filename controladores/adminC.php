@@ -16,7 +16,7 @@ class AdminC{
 
                 $_SESSION["Ingreso"] = true;
 
-                header("location:Index.php?ruta=empleados");
+                header("location:index.php?ruta=empleados");
 
             }else{
                 echo "ERROR AL INGRESAR";

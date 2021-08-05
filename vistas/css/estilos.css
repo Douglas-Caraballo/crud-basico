@@ -11,11 +11,22 @@ nav{
 	background:gray;
 }
 
+button{
+	border: none;
+	background-color: rgba(128, 128, 128, 0.5);
+	padding: 0.5rem;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+
 nav ul{
 	position:relative;
 	margin:auto;
 	width:50%;
 	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 nav ul li{
@@ -29,6 +40,7 @@ nav ul li a{
 	color:white;
 	text-decoration: none;
 	font-size: 25px;
+	transition: all 0.5s;
 }
 
 nav ul li a:hover{
@@ -38,7 +50,7 @@ nav ul li a:hover{
 section{
 	position: relative;
 	margin: auto;
-	width:400px;
+	width:100%;
 }
 
 section h1{
@@ -46,12 +58,13 @@ section h1{
 	margin: auto;
 	padding:10px;
 	text-align: center;
+	font-style: italic;
 }
 
 section form{
 	position:relative;
 	margin:auto;
-	width:400px;
+	width:100%;
 }
 
 section form input{
@@ -72,12 +85,9 @@ table{
 	position:relative;
 	margin:auto;
 	width:100%;
+	border-collapse: collapse;
+	border: 2px solid;
 }
-
-table#t1{
-	left:-25%;
-}
-
 
 table thead tr th{
 	padding:10px;
@@ -85,4 +95,22 @@ table thead tr th{
 
 table tbody tr td{
 	padding:10px;
+}
+
+@media only screen and (min-width:1020px) {
+	nav ul{
+		flex-direction: row;
+	}
+
+	section{
+		width: 65%;
+	}
+
+	section form{
+		width:400px;
+	}
+
+	button:hover{
+		background-color: rgba(128, 128, 128, 0.8);
+	}
 }

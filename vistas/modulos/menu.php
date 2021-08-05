@@ -1,4 +1,4 @@
-<nav class="navigation-menu">
+<nav>
 	<ul>
 
 		<li><a href="index.php?ruta=ingreso">Ingresar</a></li>

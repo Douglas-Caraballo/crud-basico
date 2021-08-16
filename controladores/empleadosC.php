@@ -112,7 +112,7 @@ class EmpleadosC{
             $respuesta = EmpleadosM::BorrarEmpleadoM($datosC, $tablaBD);
 
             if($respuesta == "Bien" ){
-                header("locationiIndex.php?ruta=empleados");
+                header("location:index.php?ruta=empleados");
             }else{
                 echo "Error!!!";
             }
